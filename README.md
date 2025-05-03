@@ -9,8 +9,8 @@
 
 1.  **Clone the repository:**
     ```bash
-    git clone [your_repository_url]
-    cd queue_project
+    git clone https://github.com/olksndrdevhub/go-psql-queue.git
+    cd go-psql-queue
     ```
 
 2.  **Initialize the Go module (if you haven't already):**
