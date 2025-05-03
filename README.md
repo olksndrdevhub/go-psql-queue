@@ -15,7 +15,7 @@
 
 2.  **Initialize the Go module (if you haven't already):**
     ```bash
-    go mod init [github.com/yourusername/queue_project](https://github.com/yourusername/queue_project) # Replace with your import path
+    go mod init [github.com/olksndrdevhub/go-psql-queue](https://github.com/olksndrdevhub/go-psql-queue)
     ```
 
 3.  **Create the PostgreSQL queue table:**
@@ -36,9 +36,10 @@
 ### Running the Examples
 
 1.  **Configure Database Connection:**
-    In both `examples/producer/main.go` and `examples/consumer/main.go`, update the `dbDSN` variable with your PostgreSQL connection details:
-    ```go
-    dbDSN := "user=youruser password=yourpassword host=localhost port=5432 dbname=yourdb sslmode=disable"
+    Make sure you export next env vars:
+    ```bash
+    export DATABASE_URL="postgres://<username>:<password>@<host>:<port>/<database_name>?sslmode=disable"
+    export NOTIFY_CHANNEL="your_notification_channel_name"
     ```
 
 2.  **Run the Producer:**
@@ -59,12 +60,12 @@
 
 1.  **Get the package:**
     ```bash
-    go get [github.com/yourusername/queue_project/queue](https://github.com/yourusername/queue_project/queue) # Replace with your import path
+    go get [github.com/olksndrdevhub/go-psql-queue](https://github.com/olksndrdevhub/go-psql-queue)
     ```
 
 2.  **Import the package in your Go code:**
     ```go
-    import "[github.com/yourusername/queue_project/queue](https://github.com/yourusername/queue_project/queue)"
+    import "[github.com/olksndrdevhub/go-psql-queue](https://github.com/olksndrdevhub/go-psql-queue)"
     ```
 
 3.  **Establish a database connection:**
